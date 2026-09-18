@@ -4,7 +4,7 @@ A web-based text-to-speech app powered by [MiMo TTS](https://platform.xiaomimimo
 
 https://github.com/user-attachments/assets/5bd1c4ec-60b7-4899-a73b-d29ac71049c5
 
-**[Live Demo →](https://wsamuelw.github.io/mimo-reader/)**
+**[Live Demo →](https://47096.github.io/mimo-reader/)**
 
 I'm using **MiMo Open Platform** — Xiaomi's most powerful AI (MiMo V2.5 etc). Sign up with my invite code: both get **$2 API credits + 10% off** your first plan.
 
@@ -35,7 +35,7 @@ I'm using **MiMo Open Platform** — Xiaomi's most powerful AI (MiMo V2.5 etc). 
 ## Getting Started
 
 1. **Get an API key** from [MiMo TTS](https://platform.xiaomimimo.com/docs/en-US/welcome)
-2. **Open the app** at [wsamuelw.github.io/mimo-reader](https://wsamuelw.github.io/mimo-reader/)
+2. **Open the app** at [47096.github.io/mimo-reader](https://47096.github.io/mimo-reader/)
 3. **Add your API key** in Settings (top-right corner)
 4. **Enter text**, pick a voice, and hit Generate
 
