@@ -1,122 +1,94 @@
 # MiMo TTS Reader
 
-A web-based text-to-speech app powered by [MiMo TTS](https://platform.xiaomimimo.com/docs/en-US/welcome). Design custom voices, clone any voice, and generate natural speech — all in your browser.
+**Product — browser text-to-speech for content, learning, and accessibility.**
+
+Design or clone a voice, generate natural speech, download WAV/MP3 — no install. Built to show how far a single-page app can go on a modern TTS API.
 
 https://github.com/user-attachments/assets/5bd1c4ec-60b7-4899-a73b-d29ac71049c5
 
 **[Live Demo →](https://47096.github.io/mimo-reader/)**
 
-I'm using **MiMo Open Platform** — Xiaomi's most powerful AI (MiMo V2.5 etc). Sign up with my invite code: both get **$2 API credits + 10% off** your first plan.
+---
 
-**Invite code:** `RRJPZE`
-[**Sign up →**](https://platform.xiaomimimo.com?ref=RRJPZE) *(Auto-filled on sign-up · Credits valid for 40 days)*
+## Why this product
 
-![MiMo Invite Code](images/RRJPZE.png)
+Teams need voiceover without a studio. This app turns **text + a voice choice** into audio you can ship — with **design** (describe a voice) and **clone** (upload a sample) in one place. I kept it **client-side** so the workflow stays fast and the mental model stays simple.
 
-## Use Cases
+## Use cases
 
-- **Podcast Production** — Generate voiceovers for intros, outros, and ad reads. Choose from 100 voices or clone your own.
-- **Marketing Content** — Create voiceovers for social media videos, ads, and presentations. Match your brand voice with custom descriptions.
-- **Accessibility** — Listen to any text read aloud. Useful for dyslexia, visual impairments, or audio-first learning.
-- **E-Learning** — Narrate training materials, courses, and tutorials with consistent, professional voices.
-- **Content Localization** — Generate voiceovers in different accents (Australian, British, French, Japanese) for international audiences.
+| Use | What you get |
+|-----|----------------|
+| **Podcast / YouTube** | Intros, outros, ads — or your own cloned host voice |
+| **Marketing** | Brand voice for social, explainers, decks |
+| **Accessibility** | Listen to long text (dyslexia, vision, audio-first) |
+| **E-learning** | Consistent narration for courses |
+| **Localization** | Accents/styles for different audiences |
 
 ## Features
 
-- **100 preset voices** across 6 categories (Conversational, Professional, Expressive, Youthful, Character, Accent)
-- **Voice cloning** from audio file or microphone recording
-- **Voice design** with editable descriptions for fine-tuned control
-- **Dark/light theme** with system preference detection
-- **Download as WAV or MP3** for any project
-- **Non-interrupting generation** — keep listening while generating new audio
-- **Responsive design** — works on desktop and mobile
-- **Keyboard shortcuts** — `⌘+Enter` to generate
+- **100+ preset voices** (6 categories)
+- **Voice design** — editable descriptions
+- **Voice clone** — file or mic
+- **WAV / MP3 download**
+- Dark/light theme · responsive · `⌘+Enter` generate · non-blocking generation
 
-## Getting Started
+## Getting started
 
-1. **Get an API key** from [MiMo TTS](https://platform.xiaomimimo.com/docs/en-US/welcome)
-2. **Open the app** at [47096.github.io/mimo-reader](https://47096.github.io/mimo-reader/)
-3. **Add your API key** in Settings (top-right corner)
-4. **Enter text**, pick a voice, and hit Generate
+1. Open **[the live app](https://47096.github.io/mimo-reader/)**  
+2. **Settings** → add your [MiMo TTS](https://platform.xiaomimimo.com/docs/en-US/welcome) API key  
+3. Text → pick a voice → **Generate**  
 
-## Usage
+### Voice design
+Mode → voice (search/filter) → text → Generate → download.
 
-### Voice Design
+### Voice clone
+Mode → upload or record → text → Generate → download.
 
-1. Select **Voice Design** mode
-2. Choose a voice from the list (or use the search/filter)
-3. Type or paste your text
-4. Click **Generate** or press `⌘+Enter`
-5. Download as WAV or MP3
+### Preview
+Play icon on any voice · edit description · **Random** for new descriptions.
 
-### Voice Clone
+---
 
-1. Select **Voice Clone** mode
-2. Upload an audio file or record directly
-3. Type or paste your text
-4. Click **Generate**
-5. Download the cloned voice output
+## API (MiMo TTS v2.5)
 
-### Voice Preview
+| Model | Use |
+|-------|-----|
+| `mimo-v2.5-tts-voicedesign` | Custom voices from description |
+| `mimo-v2.5-tts-voiceclone` | Clone from audio sample |
+| `mimo-v2.5-tts` | Preset voices / dialect tags |
 
-- Click the **play icon** on any voice to hear a sample
-- Edit the voice description to fine-tune tone, accent, or pace
-- Use the **Random** button to generate new voice descriptions
-
-## API Reference
-
-The app uses the MiMo TTS API with the following models:
-
-| Model | Use Case |
-|-------|----------|
-| `mimo-v2.5-tts-voicedesign` | Custom voices via description |
-| `mimo-v2.5-tts-voiceclone` | Voice cloning from audio sample |
-| `mimo-v2.5-tts` | Preset voices with dialect tags |
-
-### Endpoints
-
-| Region | URL |
-|--------|-----|
+| Region | Endpoint |
+|--------|----------|
 | Singapore | `https://token-plan-sgp.xiaomimimo.com/v1/chat/completions` |
 | China | `https://token-plan-cn.xiaomimimo.com/v1/chat/completions` |
 | Standard | `https://api.xiaomimimo.com/v1/chat/completions` |
 
-## Tech Stack
+**Privacy:** your API key stays in the browser (Settings). Text/audio go to the TTS provider you configure — this app has no backend of its own.
 
-- **Frontend:** Vanilla HTML, CSS, JavaScript (single-file app)
-- **API:** MiMo TTS v2.5 (OpenAI-compatible endpoint)
-- **Audio:** Web Audio API for processing, lamejs for MP3 conversion
-- **Fonts:** JetBrains Mono
+### Platform credits (optional)
 
-## Browser Support
+I use **MiMo Open Platform**. Invite link if you want signup credit: code **`RRJPZE`** → [Sign up](https://platform.xiaomimimo.com?ref=RRJPZE) ($2 credit + 10% off first plan).
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+![MiMo invite](images/RRJPZE.png)
 
-## Keyboard Shortcuts
+## Tech
+
+Single-page **HTML/CSS/JS** · MiMo TTS (OpenAI-compatible) · Web Audio · lamejs (MP3) · JetBrains Mono  
+
+**Browsers:** Chrome 90+ · Firefox 88+ · Safari 14+ · Edge 90+
 
 | Shortcut | Action |
 |----------|--------|
-| `⌘+Enter` | Generate speech |
-| `Escape` | Cancel generation |
-| `Space` | Play/pause audio |
+| `⌘+Enter` | Generate |
+| `Escape` | Cancel |
+| `Space` | Play / pause |
 
-## Contributing
+## Family
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- [`hanna`](https://github.com/47096/hanna) — Chrome TTS extension (karaoke highlight, clone)
+- [`lux-tts`](https://github.com/47096/lux-tts) — Colab voice-clone **demo**
+- [`mimo-storyteller`](https://github.com/47096/mimo-storyteller) — multi-character audio stories
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- [MiMo TTS](https://platform.xiaomimimo.com/docs/en-US/welcome) for the TTS API
-- [JetBrains Mono](https://www.jetbrains.com/mono/) for the font
-- [lamejs](https://github.com/zhuker/lamejs) for client-side MP3 encoding
+MIT · [datafying](https://datafying.co/)
